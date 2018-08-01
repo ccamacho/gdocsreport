@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function Close()
+{
+  var quart = document.getElementById("myquarter").value;
+  google.script.run.createActReport(quart);
+  google.script.host.close();
+}
+</script>
+</head>
+<body>
+<select id="myquarter">
+  <option value="2018-03-01,2018-05-31">FY19 - Q1</option>
+  <option value="2018-06-01,2018-08-31">FY19 - Q2</option>
+  <option value="2018-09-01,2018-11-31">FY19 - Q3</option>
+  <option value="2018-12-01,2019-02-28">FY19 - Q4</option>
+
+  <option value="2019-03-01,2019-05-31">FY20 - Q1</option>
+  <option value="2019-06-01,2019-08-31">FY20 - Q2</option>
+  <option value="2019-09-01,2019-11-31">FY20 - Q3</option>
+  <option value="2019-12-01,2020-02-28">FY20 - Q4</option>
+</select>
+<br/>
+<br/>
+<input type="submit" value="OK" onclick="Close()" />
+</body>
+</html>
+
